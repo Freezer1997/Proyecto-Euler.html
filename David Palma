@@ -1,0 +1,19 @@
+def maximoDivisor(N):
+    numeroDestino=N
+    maximoDivisor=2
+    divisorActual=2
+    while numeroDestino%2==0:
+            maximoDivisor=divisorActual
+            numeroDestino=numeroDestino/divisorActual
+    divisorActual=3   
+    maxFactor=numeroDestino**0.5 
+    #print maxFactor
+    while divisorActual<=numeroDestino and divisorActual<=maxFactor:
+        while numeroDestino%divisorActual==0:
+            maximoDivisor=divisorActual
+            numeroDestino=numeroDestino/divisorActual
+        divisorActual+=2          
+        #print divisorActual,numeroDestino
+    if divisorActual>maxFactor and numeroDestino>maximoDivisor:
+        maximoDivisor=numeroDestino
+    return maximoDivisor
