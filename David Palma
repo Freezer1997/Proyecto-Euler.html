@@ -1,3 +1,15 @@
+numeroDestino=600851475143
+maximoDivisor=2
+divisorActual=2
+while numeroDestino>1:
+    while numeroDestino%divisorActual==0:
+        maximoDivisor=divisorActual
+        numeroDestino=numeroDestino/divisorActual
+        print"numeroDestino:"+str(numeroDestino)
+    divisorActual+=1
+    print "Divisor Actual:"+str(divisorActual)
+    print "numeroDestino:"+str(numeroDestino)
+print "Maximo Divisor:"+str(maximoDivisor)
 def maximoDivisor(N):
     numeroDestino=N
     maximoDivisor=2
